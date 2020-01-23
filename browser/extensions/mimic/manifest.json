@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "name": "Mimic Chrome",
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "webRequest"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "minimum_chrome_version":"22.0.0"
+}
