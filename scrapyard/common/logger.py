@@ -20,7 +20,7 @@ def main_logger(settings=default_settings):
     level = getattr(logging, settings.LOG_LEVEL)
     log_formatter = logging.Formatter('%(asctime)s %(processName)-10s %(name)s %(levelname)-8s %(message)s')
     filename = datetime.now().strftime('%Y_%m_%d.log')
-    filepath = os.path.join(settings.BASE_DIR, 'logs', filename)
+    filepath = os.path.join(log_dir, filename)
 
     file_handler = RotatingFileHandler(
         filename=filepath,
