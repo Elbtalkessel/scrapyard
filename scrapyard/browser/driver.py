@@ -43,8 +43,8 @@ class ChromeFactory(BrowserFactory):
         if self.proxies:
             proxy = next(self.proxies)
             options.add_argument(f'--proxy-server=socks5://{proxy.string}')
-        if self.gen_user_agent:
-            user_agent = next(self.gen_user_agent).strip()
+        if self.useragents:
+            user_agent = next(self.useragents).strip()
             options.add_argument(f'user-agent={user_agent}')
         options.add_extension(os.path.join(
             settings.BASE_DIR, 'extensions', 'mimic', 'mimic.crx'
